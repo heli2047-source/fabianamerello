@@ -1,0 +1,13 @@
+# Material de apoio enviado pelo cliente (não vai para o site)
+/*.docx
+/*.jpg
+/*.jpeg
+/*.png
+
+# Sistema
+.DS_Store
+Thumbs.db
+*.swp
+*.tmp
+.vscode/
+.idea/
