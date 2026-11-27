@@ -13,7 +13,6 @@ GitHub Pages, branch `main`, pasta `/`. Enquanto forem propostas, as páginas fi
 
 ## Pendências
 
-- Número do WhatsApp: preencher `WHATSAPP_NUMERO` no script de `versao-a/index.html` e `versao-b/index.html`.
 - Fotos em resolução maior, principalmente a `assets/img/fabiana1.jpg`.
 
 Projeto por [Pequeno Empresário](https://pequenoempresario.com.br/).
