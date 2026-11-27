@@ -1,18 +1,21 @@
-# Fabiana Merello · Terapias Holísticas — Propostas de landing page
+# Fabiana Merello · Terapias Holísticas — Landing page
 
-Duas propostas de landing page, em tons suaves, para a cliente analisar e escolher.
+Landing page da terapeuta Fabiana Merello: Reiki, Energy Healing, Código HumanoSense e Humanoterapia, presencial ou à distância.
 
-- **Versão A · Santuário** (`versao-a/`): creme, areia e taupe, com filetes dourados. Editorial, com foto em arco e terapias em cards expansíveis.
-- **Versão B · Ametista** (`versao-b/`): blush, lilás e sálvia. Centralizada, com seção "Para quem é", terapias em abas e passo a passo.
+Visual "Santuário" (creme, areia e taupe com filetes dourados), escolhido pela cliente entre duas propostas, com elementos trazidos da segunda: "Para quem é", "Como começar" em 3 passos e o bloco de contato centralizado.
 
-A raiz (`index.html`) apresenta as duas lado a lado.
+- `index.html`: a página, com CSS e JS embutidos.
+- `assets/img/`: fotos.
+- `versao-a/`: só redireciona para a raiz (link antigo enviado à cliente).
+
+Os botões de WhatsApp usam a constante `WHATSAPP_NUMERO` no script da página.
 
 ## Publicação
 
-GitHub Pages, branch `main`, pasta `/`. Enquanto forem propostas, as páginas ficam fora dos buscadores (`noindex` e `robots.txt`).
+GitHub Pages, branch `main`, pasta `/`. A página ainda está fora dos buscadores (`noindex` e `robots.txt`).
 
 ## Pendências
 
-- Fotos em resolução maior, principalmente a `assets/img/fabiana1.jpg`.
+- Fotos em resolução maior: `assets/img/fabiana1.jpg` (topo) e `assets/img/fabiana2.jpg` (retrato oval).
 
 Projeto por [Pequeno Empresário](https://pequenoempresario.com.br/).

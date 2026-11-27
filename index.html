@@ -4,45 +4,485 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<title>Fabiana Merello · Propostas de site</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,400&family=Jost:wght@300;400&display=swap" rel="stylesheet">
+<title>Fabiana Merello · Terapias Holísticas</title>
+<meta name="description" content="Fabiana Merello, terapeuta holística. Reiki, Energy Healing, Código HumanoSense e Humanoterapia, presencial ou à distância. Um convite para cuidar de si e reconectar-se com sua essência.">
+<meta property="og:title" content="Fabiana Merello · Terapias Holísticas">
+<meta property="og:description" content="Um chamado do coração que se transformou em propósito. Reiki, Energy Healing, Código HumanoSense e Humanoterapia.">
+<meta property="og:image" content="assets/img/fabiana1.jpg">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#F5EFE7">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Fabiana Merello · Terapias Holísticas",
+  "description": "Terapias holísticas presenciais e à distância: Reiki, Energy Healing, Código HumanoSense e Humanoterapia.",
+  "founder": {"@type": "Person", "name": "Fabiana Merello", "jobTitle": "Terapeuta Holística"},
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Terapias",
+    "itemListElement": [
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Reiki"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Energy Healing"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Código HumanoSense"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Humanoterapia"}}
+    ]
+  }
+}
+</script>
 <style>
+:root{
+  --cream:#F5EFE7;
+  --linen:#EDE4D8;
+  --sand:#E2D4C3;
+  --taupe:#9A7B63;
+  --taupe-deep:#7E624D;
+  --cocoa:#4E3D31;
+  --muted:#7A6A5D;
+  --gold:#C3A574;
+  --white:#FBF8F4;
+  --serif:"Cormorant Garamond", Georgia, serif;
+  --sans:"Jost", system-ui, sans-serif;
+  --wrap:1160px;
+}
 *{box-sizing:border-box;margin:0;padding:0}
-body{background:#F5EFE7;color:#4E3D31;font-family:Jost,system-ui,sans-serif;font-weight:300;padding:64px 20px}
-.wrap{max-width:980px;margin:0 auto}
-p.k{font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:#9A7B63}
-h1{font-family:"Cormorant Garamond",serif;font-weight:400;font-size:clamp(36px,5vw,56px);margin:10px 0 8px}
-.lead{color:#7A6A5D;max-width:60ch}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-top:44px}
-a.card{display:block;text-decoration:none;color:inherit;background:#FBF8F4;border-radius:24px;padding:28px;border:1px solid #E2D4C3;transition:transform .3s,box-shadow .3s}
-a.card:hover{transform:translateY(-4px);box-shadow:0 24px 44px -28px rgba(78,61,49,.45)}
-.sw{display:flex;gap:8px;margin-bottom:22px}
-.sw i{width:38px;height:38px;border-radius:50%;border:1px solid rgba(0,0,0,.06)}
-h2{font-family:"Cormorant Garamond",serif;font-weight:400;font-size:32px}
-h2 em{color:#9A7B63}
-.card p{color:#7A6A5D;margin-top:10px;line-height:1.6}
-.go{display:inline-block;margin-top:18px;font-size:12px;letter-spacing:.2em;text-transform:uppercase}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--cocoa);font-family:var(--sans);font-weight:300;font-size:17px;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+.eyebrow{font-family:var(--sans);font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--taupe);font-weight:400}
+.serif{font-family:var(--serif)}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.1;color:var(--cocoa)}
+em{font-style:italic}
+.rule{width:56px;height:1px;background:var(--gold);border:0;margin:22px 0}
+
+.btn{display:inline-flex;align-items:center;gap:12px;font-family:var(--sans);font-size:13px;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;padding:16px 28px;border-radius:999px;transition:background .3s,color .3s,transform .3s}
+.btn-solid{background:var(--taupe);color:var(--white)}
+.btn-solid:hover{background:var(--taupe-deep);transform:translateY(-1px)}
+.btn-ghost{color:var(--cocoa);padding-left:6px;padding-right:6px}
+.btn-ghost:hover{color:var(--taupe)}
+.btn svg{width:16px;height:16px}
+
+/* NAV */
+.nav{position:sticky;top:0;z-index:20;background:rgba(245,239,231,.86);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid transparent;transition:border-color .3s}
+.nav.scrolled{border-color:var(--sand)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:76px}
+.brand{text-decoration:none;line-height:1}
+.brand b{display:block;font-family:var(--serif);font-weight:500;font-size:24px;letter-spacing:.16em;text-transform:uppercase}
+.brand span{display:block;font-size:10px;letter-spacing:.34em;text-transform:uppercase;color:var(--taupe);margin-top:5px}
+.nav ul{display:flex;gap:34px;list-style:none}
+.nav ul a{text-decoration:none;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);transition:color .2s}
+.nav ul a:hover{color:var(--cocoa)}
+.nav .btn{padding:12px 22px;font-size:11px}
+
+/* HERO */
+.hero{position:relative;padding:72px 0 96px;overflow:hidden}
+.hero::before{content:"";position:absolute;right:-10%;top:-20%;width:70%;height:140%;background:radial-gradient(closest-side,rgba(255,250,242,.95),rgba(245,239,231,0));pointer-events:none}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(42px,5.6vw,76px);margin:22px 0 0;letter-spacing:-.01em}
+.hero h1 em{color:var(--taupe)}
+.hero .lead{font-size:19px;max-width:30ch;color:var(--muted)}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:18px;align-items:center;margin-top:36px}
+.pillars{display:flex;gap:0;margin-top:56px}
+.pillar{flex:1;text-align:center;padding:0 12px;border-left:1px solid var(--sand)}
+.pillar:first-child{border-left:0;padding-left:0}
+.pillar .ico{width:58px;height:58px;margin:0 auto 12px;border-radius:50%;border:1px solid var(--gold);display:grid;place-items:center;color:var(--taupe)}
+.pillar .ico svg{width:26px;height:26px}
+.pillar p{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+
+.arch{position:relative;justify-self:center;width:min(100%,380px)}
+.arch .frame{border-radius:200px 200px 18px 18px;overflow:hidden;aspect-ratio:3/4.3;box-shadow:0 30px 60px -30px rgba(78,61,49,.35)}
+.arch .frame img{width:100%;height:100%;object-fit:cover}
+.arch::after{content:"";position:absolute;inset:-14px;border:1px solid var(--gold);border-radius:214px 214px 28px 28px;pointer-events:none;opacity:.7}
+.arch .tag{position:absolute;left:-34px;bottom:44px;background:var(--white);padding:14px 20px;border-radius:14px;box-shadow:0 14px 30px -16px rgba(78,61,49,.35);font-family:var(--serif);font-style:italic;font-size:18px;line-height:1.3}
+.arch .tag small{display:block;font-family:var(--sans);font-style:normal;font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:var(--taupe)}
+
+/* INTRO BAND */
+.band{background:var(--linen);padding:76px 0;text-align:center}
+.band p.quote{font-family:var(--serif);font-size:clamp(26px,3.4vw,38px);line-height:1.35;max-width:26ch;margin:0 auto}
+.band p.quote em{color:var(--taupe)}
+
+/* TERAPIAS */
+section{scroll-margin-top:80px}
+.therapies{padding:110px 0}
+.head{max-width:620px;margin-bottom:56px}
+.head h2{font-size:clamp(36px,4.4vw,56px);margin-top:14px}
+.head p{color:var(--muted);margin-top:14px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
+.card{background:var(--white);border-radius:24px;padding:40px 40px 34px;position:relative;border:1px solid rgba(195,165,116,.25);transition:transform .35s,box-shadow .35s}
+.card:hover{transform:translateY(-4px);box-shadow:0 26px 50px -30px rgba(78,61,49,.35)}
+.card .num{font-family:var(--serif);font-size:17px;font-weight:500;color:var(--taupe);letter-spacing:.2em}
+.card h3{font-size:34px;margin:10px 0 6px}
+.card .tagline{font-family:var(--serif);font-style:italic;font-size:20px;color:var(--taupe);line-height:1.4}
+.card p{margin-top:16px;color:var(--muted);font-size:16px}
+.card .mode{display:inline-flex;gap:8px;margin-top:20px;flex-wrap:wrap}
+.card .mode span{font-size:11px;letter-spacing:.18em;text-transform:uppercase;padding:6px 12px;border:1px solid var(--sand);border-radius:999px;color:var(--muted)}
+.card details{margin-top:22px;border-top:1px solid var(--linen);padding-top:16px}
+.card summary{cursor:pointer;list-style:none;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--cocoa);display:flex;align-items:center;gap:10px}
+.card summary::-webkit-details-marker{display:none}
+.card summary::after{content:"+";font-family:var(--serif);font-size:22px;line-height:1;color:var(--taupe);transition:transform .3s}
+.card details[open] summary::after{transform:rotate(45deg)}
+.card details p{font-size:15.5px}
+.card .closing{font-family:var(--serif);font-style:italic;font-size:19px;color:var(--cocoa);margin-top:16px}
+
+/* PARA QUEM É */
+.feel{padding:110px 0 40px;text-align:center}
+.feel .eyebrow{display:inline-flex;align-items:center;gap:12px}
+.feel .eyebrow::before,.feel .eyebrow::after{content:"";width:24px;height:1px;background:var(--gold)}
+.feel h2{font-size:clamp(34px,4.2vw,54px);margin:14px auto 0;max-width:20ch}
+.feel h2 em{color:var(--taupe)}
+.chips{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;max-width:880px;margin:42px auto 0;list-style:none}
+.chips li{font-size:16px;padding:11px 22px;border-radius:999px;background:var(--white);border:1px solid rgba(195,165,116,.35);color:var(--cocoa);box-shadow:0 8px 20px -16px rgba(78,61,49,.45)}
+.chips li:nth-child(3n+2){background:var(--linen);border-color:transparent}
+.chips li:nth-child(3n){background:#F0E6D8;border-color:rgba(195,165,116,.2)}
+.feel p.after{color:var(--muted);max-width:52ch;margin:34px auto 0;font-family:var(--serif);font-style:italic;font-size:21px;line-height:1.5}
+
+/* COMO COMEÇAR */
+.journey{position:relative;padding:120px 0;background:linear-gradient(180deg,var(--sand),var(--linen));overflow:hidden}
+.journey::before{content:"";position:absolute;left:50%;top:260px;width:720px;height:720px;transform:translate(-50%,-50%);border-radius:50%;border:1px solid rgba(195,165,116,.45)}
+.journey::after{content:"";position:absolute;left:50%;top:260px;width:520px;height:520px;transform:translate(-50%,-50%);border-radius:50%;border:1px solid rgba(195,165,116,.3)}
+.journey .wrap{position:relative;z-index:1;text-align:center}
+.journey h2{font-size:clamp(36px,4.6vw,60px);margin:16px auto 26px;max-width:21ch}
+.journey h2 em{color:var(--taupe-deep)}
+.journey .intro p{color:var(--cocoa);font-size:18px;margin:0 auto 14px;max-width:62ch}
+.steps{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:56px;counter-reset:s;text-align:left}
+.steps li{counter-increment:s;background:rgba(251,248,244,.78);border:1px solid rgba(195,165,116,.3);border-radius:24px;padding:34px 30px;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px)}
+.steps li::before{content:counter(s);display:grid;place-items:center;width:46px;height:46px;border-radius:50%;border:1px solid var(--gold);font-family:var(--serif);font-size:22px;color:var(--taupe);margin-bottom:18px;background:var(--white)}
+.steps h3{font-size:27px}
+.steps p{color:var(--muted);font-size:16px;margin-top:8px}
+
+/* HISTÓRIA */
+.story{padding:120px 0}
+.story .wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:72px;align-items:start}
+.portrait{position:sticky;top:110px}
+.portrait .oval{border-radius:50%;overflow:hidden;aspect-ratio:353/464;background:#F1EBE3}
+.portrait .oval img{width:100%;height:100%;object-fit:cover;transform:scale(1.16)}
+.portrait .roles{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:24px}
+.portrait .roles span{font-family:var(--serif);font-style:italic;font-size:18px;color:var(--taupe)}
+.portrait .roles i{color:var(--gold);font-style:normal}
+.story h2{font-size:clamp(36px,4.4vw,56px);margin-top:14px}
+.story .hello{font-family:var(--serif);font-size:26px;font-style:italic;color:var(--taupe);margin-top:8px}
+.story .text p{margin-top:18px;color:var(--muted)}
+.story .text p.strong{color:var(--cocoa);font-family:var(--serif);font-size:23px;line-height:1.45;font-style:italic}
+.tools{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.tools span{font-size:12px;letter-spacing:.14em;text-transform:uppercase;background:var(--linen);color:var(--cocoa);padding:7px 14px;border-radius:999px}
+.bonds{display:grid;grid-template-columns:.95fr 1fr;gap:14px;margin-top:44px}
+.bonds figure{position:relative;border-radius:16px;overflow:hidden;background:var(--linen)}
+.bonds figure:nth-child(1){grid-row:1 / 3}
+.bonds figure:nth-child(2){aspect-ratio:4/3}
+.bonds figure:nth-child(3){aspect-ratio:1600/839}
+.bonds img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.88) sepia(.06)}
+.bonds figure::after{content:"";position:absolute;inset:55% 0 0;background:linear-gradient(transparent,rgba(78,61,49,.6))}
+.bonds figcaption{position:absolute;z-index:1;left:12px;bottom:10px;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--white);text-shadow:0 1px 8px rgba(0,0,0,.45)}
+
+/* CONTATO */
+.contact{padding:0 0 110px}
+.contact .box{position:relative;overflow:hidden;text-align:center;border-radius:44px;padding:90px 32px;background:linear-gradient(160deg,#6E5442,#86684F 55%,#A2846A)}
+.contact .box::before,.contact .box::after{content:"";position:absolute;border-radius:50%;border:1px solid rgba(255,250,242,.24);pointer-events:none}
+.contact .box::before{width:520px;height:520px;left:-160px;top:-260px}
+.contact .box::after{width:420px;height:420px;right:-140px;bottom:-240px}
+.contact .box > *{position:relative;z-index:1}
+.contact .eyebrow{display:inline-flex;align-items:center;gap:12px;color:#EBDCC6}
+.contact .eyebrow::before,.contact .eyebrow::after{content:"";width:24px;height:1px;background:currentColor}
+.contact h2{color:var(--white);font-size:clamp(36px,5vw,62px);margin-top:14px}
+.contact h2 em{color:#EBDCC6}
+.contact p{color:rgba(251,248,244,.9);max-width:46ch;margin:18px auto 0}
+.contact .btn{margin-top:36px;background:var(--white);color:var(--cocoa)}
+.contact .btn:hover{background:#fff;transform:translateY(-2px)}
+
+footer{border-top:1px solid var(--sand);padding:36px 0 44px;font-size:13px;color:var(--muted)}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer .note{max-width:620px;font-size:12px;line-height:1.6}
+
+.wa-float{position:fixed;right:20px;bottom:20px;z-index:30;width:58px;height:58px;border-radius:50%;background:var(--taupe);color:var(--white);display:grid;place-items:center;box-shadow:0 14px 30px -10px rgba(78,61,49,.55);transition:transform .3s,background .3s}
+.wa-float:hover{transform:scale(1.06);background:var(--taupe-deep)}
+.wa-float svg{width:26px;height:26px}
+
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .9s ease,transform .9s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+@media (max-width:960px){
+  .nav ul{display:none}
+  .hero{padding:40px 0 72px}
+  .hero .wrap{grid-template-columns:1fr;gap:56px}
+  .arch{order:-1;width:min(78%,320px)}
+  .arch .tag{left:-18px;bottom:28px;font-size:16px}
+  .grid{grid-template-columns:1fr}
+  .story .wrap{grid-template-columns:1fr;gap:48px}
+  .portrait{position:static;max-width:300px;margin:0 auto}
+  .contact .box{padding:64px 22px;border-radius:32px}
+  .journey::before{width:520px;height:520px}
+  .journey::after{width:360px;height:360px}
+  .steps{grid-template-columns:1fr;max-width:520px;margin-left:auto;margin-right:auto}
+}
+@media (max-width:560px){
+  body{font-size:16px}
+  .wrap{padding:0 20px}
+  .brand b{font-size:19px}
+  .nav .btn{display:none}
+  .pillars{margin-top:44px}
+  .pillar p{font-size:10px;letter-spacing:.16em}
+  .card{padding:30px 24px 26px}
+  .card h3{font-size:30px}
+  .therapies,.story{padding:80px 0}
+  .journey{padding:90px 0}
+  .feel{padding:80px 0 20px}
+  .chips{gap:9px}
+  .chips li{font-size:14px;padding:9px 16px}
+  .steps li{padding:28px 24px}
+  .contact .btn{white-space:nowrap;font-size:11px;letter-spacing:.12em;padding:15px 22px}
+  .bonds{gap:10px}
+  .bonds figcaption{left:9px;bottom:8px;font-size:9px;letter-spacing:.18em}
+}
 </style>
 </head>
 <body>
-<div class="wrap">
-  <p class="k">Fabiana Merello · Terapias Holísticas</p>
-  <h1>Duas propostas de landing page</h1>
-  <p class="lead">Mesmo conteúdo, duas direções visuais em tons suaves. Abra cada uma no celular e no computador.</p>
-  <div class="grid">
-    <a class="card" href="versao-a/">
-      <div class="sw"><i style="background:#F5EFE7"></i><i style="background:#E2D4C3"></i><i style="background:#9A7B63"></i><i style="background:#C3A574"></i><i style="background:#4E3D31"></i></div>
-      <h2>A · <em>Santuário</em></h2>
-      <p>Creme, areia e taupe com filetes dourados. Editorial e elegante, foto em arco e terapias em cards. Agora com os ajustes pedidos: "Para quem é", "Como começar" em 3 passos e o contato no formato da B.</p>
-      <span class="go">Ver versão A →</span>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="brand" href="#inicio" aria-label="Fabiana Merello, início">
+      <b>Fabiana Merello</b>
+      <span>Terapias Holísticas</span>
     </a>
-    <a class="card" href="versao-b/">
-      <div class="sw"><i style="background:#F1E3E0"></i><i style="background:#E7DEEC"></i><i style="background:#C3CDB9"></i><i style="background:#8A6A84"></i><i style="background:#43354A"></i></div>
-      <h2>B · <em>Ametista</em></h2>
-      <p>Blush, lilás e sálvia, inspirados nos cristais e nas plantas das fotos. Mais acolhedora e centrada: halo "respirando", seção "Para quem é", terapias em abas e passo a passo.</p>
-      <span class="go">Ver versão B →</span>
-    </a>
+    <nav aria-label="Principal">
+      <ul>
+        <li><a href="#terapias">Terapias</a></li>
+        <li><a href="#comecar">Como começar</a></li>
+        <li><a href="#historia">Minha história</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-solid" data-wa="Olá, Fabiana! Gostaria de agendar uma sessão." href="#contato">Agendar</a>
   </div>
-</div>
+</header>
+
+<main id="inicio">
+
+  <section class="hero">
+    <div class="wrap">
+      <div class="reveal">
+        <p class="eyebrow">Terapias Holísticas · Presencial e à distância</p>
+        <h1>Um chamado do coração que se transformou em <em>propósito.</em></h1>
+        <hr class="rule">
+        <p class="lead">Um convite para cuidar de si, encontrar equilíbrio e reconectar-se com sua essência.</p>
+        <div class="ctas">
+          <a class="btn btn-solid" data-wa="Olá, Fabiana! Gostaria de agendar uma sessão." href="#contato">
+            Agendar uma sessão
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn-ghost" href="#terapias">Conhecer as terapias →</a>
+        </div>
+        <div class="pillars" aria-label="Pilares do atendimento">
+          <div class="pillar">
+            <div class="ico"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.1"><path d="M16 26c-5-3-7-8-7-13 3 1.5 6 4.5 7 8 1-3.5 4-6.5 7-8 0 5-2 10-7 13z"/><path d="M16 21c-1.6-4-1.6-9 0-14 1.6 5 1.6 10 0 14z"/></svg></div>
+            <p>Equilíbrio</p>
+          </div>
+          <div class="pillar">
+            <div class="ico"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.1"><path d="M7 19c2.5 4 6 6 9 6s6.5-2 9-6"/><path d="M10 17c1.8-2 3.8-3 6-3s4.2 1 6 3"/><circle cx="16" cy="9" r="2.4"/></svg></div>
+            <p>Acolhimento</p>
+          </div>
+          <div class="pillar">
+            <div class="ico"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.1"><circle cx="16" cy="16" r="9"/><circle cx="16" cy="16" r="4"/><path d="M16 3v3M16 26v3M3 16h3M26 16h3"/></svg></div>
+            <p>Essência</p>
+          </div>
+        </div>
+      </div>
+
+      <figure class="arch reveal">
+        <div class="frame"><img src="assets/img/fabiana1.jpg" alt="Fabiana Merello em atendimento, com as mãos irradiando luz, cristais e velas ao redor" width="269" height="403"></div>
+        <figcaption class="tag"><small>Terapeuta</small>Fabiana Merello</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <div class="band">
+    <div class="wrap reveal">
+      <p class="quote">Permita-se uma pausa. Um momento dedicado a <em>você</em>, ao seu bem-estar e ao equilíbrio interior.</p>
+    </div>
+  </div>
+
+  <section class="feel">
+    <div class="wrap">
+      <p class="eyebrow reveal">Para quem é</p>
+      <h2 class="reveal">Talvez você esteja vivendo <em>algo assim</em></h2>
+      <ul class="chips reveal">
+        <li>estresse do dia a dia</li>
+        <li>ansiedade</li>
+        <li>noites mal dormidas</li>
+        <li>medos</li>
+        <li>autossabotagem</li>
+        <li>tristeza profunda</li>
+        <li>angústia</li>
+        <li>luto</li>
+        <li>período de transição</li>
+        <li>dores da alma</li>
+        <li>padrões que se repetem</li>
+        <li>conflitos internos</li>
+        <li>falta de propósito</li>
+        <li>busca por autoconhecimento</li>
+        <li>vontade de se reencontrar</li>
+      </ul>
+      <p class="after reveal">Existe uma força dentro de você, mesmo nos momentos em que parece difícil encontrá-la.</p>
+    </div>
+  </section>
+
+  <section class="therapies" id="terapias">
+    <div class="wrap">
+      <div class="head reveal">
+        <p class="eyebrow">Conheça as terapias</p>
+        <h2>Caminhos de cuidado, <em>no seu tempo</em></h2>
+        <p>Todas as sessões podem ser realizadas presencialmente ou à distância, respeitando a individualidade e o momento de cada pessoa.</p>
+      </div>
+
+      <div class="grid">
+        <article class="card reveal">
+          <span class="num">01</span>
+          <h3>Reiki</h3>
+          <p class="tagline">Um momento de equilíbrio, acolhimento e conexão interior.</p>
+          <p>Terapia energética de origem japonesa que utiliza a imposição das mãos para canalizar a energia vital universal, promovendo relaxamento profundo e equilíbrio físico, mental e emocional.</p>
+          <div class="mode"><span>Presencial</span><span>À distância</span></div>
+          <details>
+            <summary>Como é a sessão</summary>
+            <p>Durante a sessão, é criado um espaço de acolhimento para que você possa desacelerar, aliviar as tensões do dia a dia e dedicar um tempo especial a si mesmo. A técnica é realizada com a imposição das mãos em pontos específicos associados aos centros energéticos, os chakras.</p>
+            <p>A prática é amplamente procurada para redução de estresse, controle da ansiedade, melhora na qualidade do sono e bem-estar geral.</p>
+            <p>Permita-se uma pausa. Um momento dedicado a você, ao seu bem-estar e ao equilíbrio interior.</p>
+          </details>
+        </article>
+
+        <article class="card reveal">
+          <span class="num">02</span>
+          <h3>Energy Healing</h3>
+          <p class="tagline">Um convite para olhar além do que é visível e aprofundar o cuidado energético.</p>
+          <p>Tecnologia de cura energética de 5ª Dimensão, com uma abordagem que transcende os conceitos tradicionais de tempo e espaço, permitindo o envio de energia independentemente da localização.</p>
+          <div class="mode"><span>Presencial</span><span>À distância</span></div>
+          <details>
+            <summary>Como é a sessão</summary>
+            <p>O atendimento começa com uma conversa para compreender as questões que você deseja trabalhar. A partir desse processo, busca-se acessar, por meio do subconsciente, crenças e traumas que possam estar relacionados a elas.</p>
+            <p>Com base no que é identificado, é conduzido o trabalho energético, respeitando a individualidade e o momento de cada pessoa.</p>
+            <p class="closing">Um momento para olhar para dentro, reconhecer padrões e abrir espaço para uma nova versão de si mesmo.</p>
+          </details>
+        </article>
+
+        <article class="card reveal">
+          <span class="num">03</span>
+          <h3>Código HumanoSense</h3>
+          <p class="tagline">Um caminho de conexão, consciência e transformação.</p>
+          <p>Tecnologia espiritual canalizada que atua em quatro níveis: mental, elemental, emocional e espiritual.</p>
+          <div class="mode"><span>Presencial</span><span>Online</span></div>
+          <details>
+            <summary>Como é a sessão</summary>
+            <p>Sua proposta é identificar a raiz de padrões que podem estar influenciando diferentes aspectos da vida, ampliando a consciência, promovendo a limpeza do campo energético e favorecendo processos de libertação e alívio de sintomas.</p>
+            <p>Esse trabalho busca favorecer a reconexão com sua verdadeira essência e abrir espaço para um novo ciclo.</p>
+            <p class="closing">Reconhecer, transformar e abrir espaço para uma nova realidade.</p>
+          </details>
+        </article>
+
+        <article class="card reveal">
+          <span class="num">04</span>
+          <h3>Humanoterapia</h3>
+          <p class="tagline">Um caminho de acolhimento, equilíbrio e reconexão com sua essência.</p>
+          <p>Um olhar ampliado para as chamadas dores da alma: angústia, ansiedade, medos, autossabotagem, tristeza profunda e outros conflitos internos.</p>
+          <div class="mode"><span>Presencial</span><span>Online</span></div>
+          <details>
+            <summary>Como é a sessão</summary>
+            <p>A abordagem considera a conexão entre os campos físico, emocional, energético e espiritual, buscando compreender possíveis origens de desequilíbrios e padrões que podem estar influenciando a vida.</p>
+            <p>Por meio de um processo de consciência, harmonização e liberação energética, busca favorecer o equilíbrio interior, o autoconhecimento e a reconexão com a própria essência.</p>
+            <p class="closing">Um convite pra viver com mais leveza, consciência e presença.</p>
+          </details>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="journey" id="comecar">
+    <div class="wrap">
+      <div class="intro reveal">
+        <p class="eyebrow">Como começar</p>
+        <h2>Sua jornada se inicia com <em>um primeiro passo</em></h2>
+        <p>A transformação começa quando você decide olhar para aquilo que já não lhe faz bem e escolher um novo caminho.</p>
+        <p>Existe uma força dentro de você, mesmo nos momentos em que parece difícil encontrá-la. Posso te acompanhar nesse processo, ajudando você a olhar para sua história sob uma nova perspectiva e despertar novas possibilidades.</p>
+      </div>
+      <ol class="steps reveal">
+        <li><h3>Vamos conversar</h3><p>Me chame pelo WhatsApp e conte um pouco do que você está vivendo.</p></li>
+        <li><h3>Escolha o formato</h3><p>As sessões podem ser presenciais ou à distância, no que fizer sentido para você.</p></li>
+        <li><h3>Seu momento</h3><p>Um espaço de cuidado, escuta e acolhimento. Juntas, identificamos a técnica mais adequada para o seu momento e para o seu processo de transformação.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="story" id="historia">
+    <div class="wrap">
+      <aside class="portrait reveal">
+        <div class="oval"><img src="assets/img/fabiana2.jpg" alt="Retrato de Fabiana Merello sorrindo" width="353" height="464" loading="lazy"></div>
+        <div class="roles"><span>filha</span><i>·</i><span>irmã</span><i>·</i><span>esposa</span><i>·</i><span>mãe</span></div>
+      </aside>
+
+      <div class="text reveal">
+        <p class="eyebrow">Minha história</p>
+        <h2>Olá, sou Fabiana Merello</h2>
+        <p class="hello">Além da terapeuta, existe uma mulher, uma história e muitos vínculos.</p>
+        <p>Sou filha, irmã, esposa e mãe. Acredito na importância dos laços que construímos ao longo da vida, no amor, no acolhimento e nas conexões que nos ajudam a crescer e evoluir.</p>
+        <p>Meu caminho no universo das terapias nasceu de um chamado muito especial: um desejo profundo, que veio do coração, de auxiliar pessoas em suas jornadas de cura, transformação e reconexão consigo mesmas.</p>
+        <p>Foi assim que comecei a trilhar meu próprio caminho, conhecendo e vivenciando diferentes ferramentas de cuidado e conexão:</p>
+        <div class="tools"><span>Reiki</span><span>Energy Healing</span><span>Código HumanoSense</span><span>Humanoterapia</span></div>
+        <p>Acredito que cada pessoa possui uma história única e merece ser acolhida com respeito, amor e sensibilidade. Meu propósito é oferecer um espaço de cuidado, escuta e acolhimento, onde você possa desacelerar, olhar para dentro e dedicar um momento especial a si mesma.</p>
+        <p>Existe beleza em cada jornada, na singularidade de cada ser e na importância de respeitar o tempo e o caminho de cada pessoa.</p>
+        <p class="strong">Será uma alegria fazer parte de um pedacinho da sua jornada de autoconhecimento e transformação.</p>
+
+        <div class="bonds">
+          <figure><img src="assets/img/fabianapaimae.jpeg" alt="Fabiana com o pai e a mãe" width="720" height="960" loading="lazy"><figcaption>Pai e mãe</figcaption></figure>
+          <figure><img src="assets/img/fabiana_irmaos.jpeg" alt="Fabiana com os irmãos" width="960" height="720" loading="lazy"><figcaption>Irmãos</figcaption></figure>
+          <figure><img src="assets/img/fabianafamilia.jpeg" alt="Fabiana com o marido e a filha" width="1600" height="839" loading="lazy"><figcaption>Família</figcaption></figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contato">
+    <div class="wrap">
+      <div class="box reveal">
+          <p class="eyebrow">Vamos conversar?</p>
+          <h2>Chegou o momento de <em>olhar para si</em></h2>
+          <p>Se você sente que este é o momento de dedicar um olhar especial a si mesmo, será um prazer conversar com você.</p>
+          <a class="btn" data-wa="Olá, Fabiana! Vim pelo site e gostaria de conversar sobre as terapias." href="#contato">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2c0 1.3.9 2.5 1 2.7.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.2-.3-.2-.5-.3z"/></svg>
+            Fale comigo pelo WhatsApp
+          </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="y"></span> Fabiana Merello · Terapias Holísticas</span>
+    <p class="note">As terapias holísticas são práticas complementares de bem-estar e não substituem diagnóstico ou tratamento médico e psicológico.</p>
+  </div>
+</footer>
+
+<a class="wa-float" data-wa="Olá, Fabiana! Vim pelo site e gostaria de conversar sobre as terapias." href="#contato" aria-label="Falar com Fabiana pelo WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2c0 1.3.9 2.5 1 2.7.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.2-.3-.2-.5-.3z"/></svg>
+</a>
+
+<script>
+const WHATSAPP_NUMERO = "5519996872618";
+document.querySelectorAll("[data-wa]").forEach(a => {
+  const txt = encodeURIComponent(a.dataset.wa);
+  a.href = `https://wa.me/${WHATSAPP_NUMERO}?text=${txt}`;
+  a.target = "_blank";
+  a.rel = "noopener";
+});
+document.getElementById("y").textContent = new Date().getFullYear();
+const nav = document.getElementById("nav");
+addEventListener("scroll", () => nav.classList.toggle("scrolled", scrollY > 10), {passive:true});
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), {threshold:.12});
+document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+</script>
 </body>
 </html>
