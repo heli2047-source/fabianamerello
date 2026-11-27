@@ -1,4 +1,4 @@
-# Fabiana Merello · Terapias Integrativas — Propostas de landing page
+# Fabiana Merello · Terapias Holísticas — Propostas de landing page
 
 Duas propostas de landing page, em tons suaves, para a cliente analisar e escolher.
 
