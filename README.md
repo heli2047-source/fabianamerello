@@ -12,7 +12,9 @@ Os botões de WhatsApp usam a constante `WHATSAPP_NUMERO` no script da página.
 
 ## Publicação
 
-GitHub Pages, branch `main`, pasta `/`. A página ainda está fora dos buscadores (`noindex` e `robots.txt`).
+GitHub Pages, branch `main`, pasta `/`, no domínio https://fabianamerello.com.br (arquivo `CNAME`). DNS no Registro.br: registros A/AAAA para os IPs do GitHub Pages e `www` como CNAME para `heli2047-source.github.io`.
+
+Indexação liberada: `robots.txt` permite tudo e aponta para o `sitemap.xml`. Ao mudar a página, atualize o `lastmod` do sitemap.
 
 ## Pendências
 
